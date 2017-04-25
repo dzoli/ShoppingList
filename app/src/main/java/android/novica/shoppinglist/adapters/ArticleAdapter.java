@@ -14,6 +14,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -149,14 +150,12 @@ public class ArticleAdapter extends BaseAdapter {
         return data;
     }
 
-    public void setNewArticle(Article art){
-       for(Article a : data){
-           if(a.equals(art)){
-               data.remove(a);
-               data.add(art);
-           }
-       }
-       notifyDataSetChanged();
+
+
+    public void update(List<Article> arts){
+        for(Article a : arts){
+            data.get(Integer.parseInt(a.getPhotoCode()) - 1).setBought(true);
+        }
     }
 
 }

@@ -70,13 +70,7 @@ public class ShoppingActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if(!(extras == null)){
             ShoppingList list = (ShoppingList) getIntent().getSerializableExtra(TagsConstants.NEW_LIST_SO);
-            for(Article adapterArt : articlesAdapter.getData()){
-                for(Article listArt : list.getArticles()){
-                    if(listArt.equals(adapterArt)){
-                        articlesAdapter.setNewArticle(listArt);
-                    }
-                }
-            }
+            articlesAdapter.update(list.getArticles());
             etNameList.setText(list.getShoppingListName());
         }
     }

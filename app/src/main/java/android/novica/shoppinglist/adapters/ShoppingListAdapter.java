@@ -107,6 +107,10 @@ public class ShoppingListAdapter extends BaseAdapter {
         notifyDataSetChanged();
     }
 
+    public void update(ShoppingList usedList){
+
+    }
+
     public void remove(ShoppingList art){
         data.remove(art);
         notifyDataSetChanged();
