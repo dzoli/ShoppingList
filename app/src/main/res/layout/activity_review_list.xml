@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="android.novica.shoppinglist.activity.ReviewListActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvListName"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_weight="0.23"
+        android:text="Name: "
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <ListView
+        android:id="@+id/purchasedArticles"
+        android:layout_width="match_parent"
+        android:layout_height="437dp"
+        android:layout_weight="0.26" />
+
+</LinearLayout>

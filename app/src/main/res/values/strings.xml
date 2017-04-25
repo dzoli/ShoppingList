@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Picasso artworks</string>
+    <string name="title_activity_go_to_shop">GoToShopActivity</string>
+    <string name="purchased_items">purchased items: </string>
+    <string name="name">Name</string>
+    <string name="shopping_list_is_active">Shopping list is active</string>
+    <string name="bay_this">bay this article</string>
+    <string name="nameArticle">Name:</string>
+    <string name="costArticle">Cost:</string>
+
+    <string name="article_1">Accordionist</string>
+    <string name="article_2">Acrobat</string>
+    <string name="article_3">Artist and his model</string>
+    <string name="article_4">Asleep</string>
+    <string name="article_5">Avignon</string>
+    <string name="article_6">Bathers</string>
+    <string name="article_7">Bather with beach ball</string>
+    <string name="article_8">Boy leading a horse</string>
+    <string name="article_9">Bull fight</string>
+    <string name="article_10">Cat catching a bird</string>
+    <string name="article_11">Calestina</string>
+    <string name="article_12">Don Quixote</string>
+    <string name="article_13">Girl before a mirror</string>
+    <string name="article_14">Blue nude</string>
+    <string name="article_15">Ma Jolie</string>
+    <string name="article_16">Maternity</string>
+    <string name="article_17">Portrait of Ambroise Vollard</string>
+    <string name="article_18">Reading</string>
+    <string name="article_19">Blue guitarist</string>
+
+</resources>
