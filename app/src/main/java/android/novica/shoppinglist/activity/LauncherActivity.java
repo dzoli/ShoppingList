@@ -1,7 +1,6 @@
 package android.novica.shoppinglist.activity;
 
 import android.content.Intent;
-import android.nfc.Tag;
 import android.novica.shoppinglist.R;
 import android.novica.shoppinglist.adapters.ShoppingListAdapter;
 import android.novica.shoppinglist.constants.TagsConstants;
@@ -77,7 +76,7 @@ public class LauncherActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         //check which request we responding to
         //and if result is ok
-        if(requestCode == TagsConstants.NEW_LIST_REQVEST && resultCode == RESULT_OK){
+        if(requestCode == TagsConstants.NEW_LIST_REQUEST && resultCode == RESULT_OK){
             ShoppingList list = (ShoppingList) data.getSerializableExtra(TagsConstants.NEW_LIST_SO);
             adapter.add(list);
         }else if(requestCode == TagsConstants.USED_LIST_REQUEST  && resultCode == RESULT_OK){
@@ -95,7 +94,7 @@ public class LauncherActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(LauncherActivity.this, ShoppingActivity.class);
-                startActivityForResult(i, TagsConstants.NEW_LIST_REQVEST);
+                startActivityForResult(i, TagsConstants.NEW_LIST_REQUEST);
             }
         });
     }

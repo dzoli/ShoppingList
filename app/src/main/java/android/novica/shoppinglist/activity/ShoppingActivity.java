@@ -86,9 +86,12 @@ public class ShoppingActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() { //list stay active
+        getCheckedArticles();
+        if(etNameList.getText().toString().isEmpty()){
+            Toast.makeText(ShoppingActivity.this, "Add name to list...", Toast.LENGTH_SHORT).show();
+        }else {
             Intent intent = new Intent(ShoppingActivity.this, LauncherActivity.class);
             ShoppingList newShoppingList = new ShoppingList();
-            getCheckedArticles();
             newShoppingList.setIsActive(true);
             newShoppingList.setArticles(checkedArticles);
             newShoppingList.setShoppingListName(etNameList.getText().toString());
@@ -96,22 +99,22 @@ public class ShoppingActivity extends AppCompatActivity {
             setResult(Activity.RESULT_OK, intent);
             super.onBackPressed();
             finish();
+        }
     }
 
     private void createSomeArticles() {
         articlesAdapter = new ArticleAdapter(this);
-        for(int i = 1; i < 20; i++){
+        for(int i = 1; i < TagsConstants.ARTICLES_SIZE; i++){
             Article a = new Article("n1",randomGenerator(),String.valueOf(i));
             articlesAdapter.add(a);
         }
-
         articlesList.setAdapter(articlesAdapter);
     }
 
     private Double randomGenerator(){
         Double rnd = new Random().nextDouble() * 100 + 20;
-        DecimalFormat decim = new DecimalFormat("#.##");
-        Double rndF = Double.parseDouble(decim.format(rnd));
+        DecimalFormat decimalFormat = new DecimalFormat("#.##");
+        Double rndF = Double.parseDouble(decimalFormat.format(rnd));
         return rndF;
     }
 
