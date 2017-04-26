@@ -1,7 +1,8 @@
 # ShoppingList
-userguide:
-User can create new lists from home screen when press add button
-All lists on home screen are sorted (first active ones, and then complete ones)
+userguide: <br />
 
-List stay active when user go to store and go back to home screen with back button
-List is complete when user in store sceen press done button
+User can create new lists from home screen when the add button is pressed. <br />
+All lists on home screen are sorted (first active ones, and then complete ones) <br /><br />
+
+List remains active when user go to store and go back to home screen with the back button.<br />
+List is complete when the user in store sceen press done button.
